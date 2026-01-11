@@ -96,16 +96,6 @@ function cleanTextForSpeech(text) {
 // Hız ayarı değiştiğinde
 document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('readingText').textContent = tomText;
-    
-    const speedSlider = document.getElementById('speedSlider');
-    const speedValue = document.getElementById('speedValue');
-    
-    if (speedSlider && speedValue) {
-        speedSlider.addEventListener('input', (e) => {
-            speechRate = parseFloat(e.target.value);
-            speedValue.textContent = speechRate.toFixed(1) + 'x';
-        });
-    }
 });
 
 // SES EFEKTLERİ
