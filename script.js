@@ -621,7 +621,7 @@ function loadVocabularyTest() {
     
       const mainTitle = document.querySelector('#mainScreen h1');
     if (mainTitle) {
-        mainTitle.textContent = '📖 English Vocabulary Test';
+        mainTitle.textContent = '📖Welcome to the vocabulary test!';
     }
     
     const listenBtn = document.getElementById('listenBtn');
