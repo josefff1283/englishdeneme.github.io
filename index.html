@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Listening Test</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.responsivevoice.org/responsivevoice.js?key=wUuUr2la"></script>
+</head>
+<body>
+
+<div class="container active" id="mainScreen">
+    <h1>📖 English Listening Test</h1>
+    
+    <div class="text-box">
+        <div class="text" id="readingText"></div>
+    </div>
+
+    <div class="speed-control">
+        <label for="speedSlider">🎚️ Speed:</label>
+        <input type="range" id="speedSlider" class="speed-slider" 
+               min="0.5" max="2" step="0.1" value="0.9">
+        <span class="speed-value" id="speedValue">0.9x</span>
+    </div>
+
+    <div class="timer-box">
+        ⏱ Listening Time: <span id="timer">00:00</span>
+    </div>
+
+    <div class="buttons">
+        <button onclick="readText()" class="btn listen-btn" id="listenBtn">🎧 Listen</button>
+        <button onclick="pauseReading()" class="btn pause-btn" id="pauseBtn" style="display:none;">⏸ Pause</button>
+        <button onclick="resumeReading()" class="btn resume-btn" id="resumeBtn" style="display:none;">▶ Continue</button>
+    </div>
+    
+    <p class="info">Test will start automatically after listening</p>
+</div>
+
+<div class="container" id="questionScreen">
+    <h1>Question <span id="current">1</span>/<span id="total">40</span></h1>
+    
+    <div class="progress">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+    
+    <div class="timer-box">
+        ⏱ Time: <span id="questionTimer">00:10</span>
+    </div>
+    
+    <h2 id="questionText"></h2>
+    
+    <div id="options" class="options"></div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
