@@ -619,7 +619,10 @@ function loadVocabularyTest() {
     isPaused = false;
     currentQuestionsData = questionsDataVocabulary;
     
-    document.getElementById('readingText').textContent = vocabularyText;
+      const mainTitle = document.querySelector('#mainScreen h1');
+    if (mainTitle) {
+        mainTitle.textContent = '📖 English Vocabulary Test';
+    }
     
     const listenBtn = document.getElementById('listenBtn');
     const pauseBtn = document.getElementById('pauseBtn');
