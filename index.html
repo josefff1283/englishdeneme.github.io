@@ -24,6 +24,7 @@
         <button onclick="readText()" class="btn listen-btn" id="listenBtn">🎧 Listen</button>
         <button onclick="pauseReading()" class="btn pause-btn" id="pauseBtn" style="display:none;">⏸ Pause</button>
         <button onclick="resumeReading()" class="btn resume-btn" id="resumeBtn" style="display:none;">▶ Continue</button>
+        <button onclick="skipToQuestionsDirectly()" class="btn skip-btn" id="skipBtn">⏭ Skip</button>
     </div>
     
     <p class="info">Test will start automatically after listening</p>
@@ -43,6 +44,8 @@
     <h2 id="questionText"></h2>
     
     <div id="options" class="options"></div>
+    
+    <button onclick="skipCurrentQuestion()" class="btn skip-btn">⏭ Skip Question</button>
 </div>
 
 <script src="script.js"></script>
